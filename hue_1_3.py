@@ -47,7 +47,7 @@ elif operator == "/" or operator == ":":
         print(str(zahl_1) + " / " + str(zahl_2) + " =  " + str(zahl_1/zahl_2))
     else:
         print("Division durch 0 ist nicht möglich!")
-elif operator == "%":
+elif operator == "%":       # <== Spaßfaktor, nicht Teil der Aufgabe ;-P
     print(str(zahl_1) + " % " + str(zahl_2) + " =  " + str(zahl_1 % zahl_2))
 else:
     print("Unbekannte Rechenoperation")
