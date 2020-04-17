@@ -1,6 +1,13 @@
  
 # Zusammenfassung
 
+## Vorwort
+
+Der Quellcode ist während dem Kurs "Python" von SmartNinja entstanden.
+Kursstart: 16.04.20220.
+SmartNinja [Webseite](https://www.smartninja.org/)
+Die Pythondateien sind in den Ordnern "_uebung" und "_unterricht" aufgeteilt.
+
 ## Inhaltsangabe
 [Kommentare | einzeilige u. mehrzeilige](#Kommentare)<br/>
 [Variable | Deklaration und Initalisierung](#Variable)<br/>
