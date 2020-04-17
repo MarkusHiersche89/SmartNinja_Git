@@ -92,6 +92,8 @@ Bei der Funktion "input()", kann in der Klammer angegeben werden, was unmittelba
 ```python
 # Bei String-Eingaben:
 name = input("Ihr Name: ")
+
+# Bei Int-Eingabe:
 alter = int(input("Ihr Alter: "))
 
 # ...
