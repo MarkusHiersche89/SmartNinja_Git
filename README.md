@@ -2,10 +2,11 @@
 # Zusammenfassung
 
 ## Inhaltsangabe
+[Kommentar: einzeilige u. mehrzeilige](Kommentare)
 
 ## Tag 1
 
-### Kommentare
+### <a name="Kommentare"></a>Kommentare
 
 Kommentare sind für die Entwickler, um sich Notizen zum Code zu machen. Diese werden vom Interpreter (beim ausführen) ignoriert.
 Zum Testen wird auch manchmal eine Codezeile oder ein ganzer Block auskommentiert. Der Vorteil ist, dass der Code an Ort und Stelle stehen bleiben kann und nicht ausgeschnitten werden muss, sondern nur auskommentiert wird.
@@ -26,7 +27,7 @@ Text
 """
 ```
 
-### Variable & Typen
+### <a name="Variable"></a>Variable & Typen
 
 Folgende Typen gibt es:
 | Englisch | Deutsch | Beispiel |
@@ -49,7 +50,7 @@ maennlich = True
 gewicht = 78.3
 ```
 
-### Ausgabe
+### <a name="Ausgabe"></a>Ausgabe
 
 Um auf der Konsole (unter Windows CMD/CommandLine und unter Linux Terminal/Shell genannt) Text auszugeben wird der Befehl print() benötigt.
 
@@ -58,7 +59,7 @@ name = "Max"
 print("Hallo " + name + "!")
 ```
 
-### Konvertierung
+### <a name="Konvertierung"></a>Konvertierung
 
 Um einen Typ von einer Variable (Wert) zu ändern ist es nötig diesen zu Konvertieren.
 
@@ -77,7 +78,7 @@ print(zahl_1 + " + " + zahl_2 + " = " + str(zahl_1 + zahl_2))
 # Ausgabe: 5 + 3 = 8
 ```
 
-### Eingabe
+### <a name="Eingabe"></a>Eingabe
 
 Natürlich soll auch der Benutzer Eingaben machen können.
 
@@ -91,18 +92,51 @@ alter = int(input("Ihr Alter: "))
 # ...
 ```
 
-### Verzweigung
+### <a name="Verzweigung"></a>Verzweigung
 
 Etwas häufiger werden Verzeigungen benötigt.
 Bsp.: Wenn ich müde bin, dann gehe ich schlafen.
 
-> Vergleichsoperatoren:
-> <
-> <=
-> ==
-> !=
-> \>=
-> \>
+Vergleichsoperatoren:
+| Schreibweise | gesprochen |
+|---|---|
+| < | kleiner |
+| <= | kleiner gleich |
+| == | gleich |
+| != | ungleich |
+| >= | größer gleich |
+| > | größer |
+
+Boolsche Operatoren:
+| Schreibweise | gesprochen |
+|---|---|
+| and | und |
+| or | oder |
+| is | gleiches Objekt |
+| is not | ungleiches Objekt |
+| not | nicht |
+ 
+```python
+secret = 1234
+eingabe = int(input("Raten Sie eine Zahl: "))
+
+if eingabe < secret :
+  print("Ihre Eingabe war zu klein")
+elif eingabe == secret :
+  print("Perfekt! Erraten.")
+else:
+  print("Ihre Eingabe war zu groß")
+
+hunger = True
+bin_daheim = False
+
+if hunger == True and bin_daheim == True:
+  print("Gehe bitte zum Kühlschrenk")
+elif hunger == True and bin_daheim == False:
+  print("Hole dir was vom Supermarkt")
+else:
+  print("Kein Handlungsbedarf")
+```
 
 ## Tag 2
 
