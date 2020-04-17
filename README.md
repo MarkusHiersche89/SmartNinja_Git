@@ -29,12 +29,13 @@ Text
 ### Variable & Typen
 
 Folgende Typen gibt es:
-> Englisch	Deutsch		Bsp
-> Integer		Ganze Zahl	3
-> Float		Kommazahl	10.2
-> String		Zeichenkette	"Ich liebe meine 4 Kinder und den Burschen"
-> Boolean		Wahrheitswert	True oder False
-> Array/Vector	Liste		["Hy", 2, 2.4, False, 4]
+| Englisch | Deutsch | Beispiel |
+|---|---|---|
+| Integer | Ganze Zahl | 3 |
+| Float | Kommazahl | 10.2 |
+| String | Zeichenkette | "Ich liebe meine 4 kinder und den Burschen" |
+| Boolean | Wahrheitswert | True oder False |
+| List | Liste | ["Hy", 2, 2.4, False, 4]
 
 Deklarieren und Initalisieren:
 ```python
