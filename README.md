@@ -16,7 +16,7 @@ Die Pythondateien sind in den Ordnern "_uebung" und "_unterricht" aufgeteilt.
 [Eingabe | input()](#Eingabe)<br/>
 [Verzweigung | if, elif, else](#Verzweigung)<br/>
 
-## Tag 1 - 16.06.2020
+## Tag 1 - 16.04.2020
 
 ### <a name="Kommentare"></a>Kommentare
 
