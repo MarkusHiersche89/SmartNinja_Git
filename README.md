@@ -4,7 +4,7 @@
 ## Vorwort
 
 Der Quellcode ist während dem Kurs "Python" von SmartNinja entstanden.<br/>
-Kursstart: 16.04.20220.<br/>
+Kursstart: 16.04.2020.<br/>
 SmartNinja [Webseite](https://www.smartninja.org/)<br/>
 Die Pythondateien sind in den Ordnern "_uebung" und "_unterricht" aufgeteilt.
 
