@@ -2,7 +2,7 @@
 # Zusammenfassung
 
 ## Inhaltsangabe
-[Kommentar: einzeilige u. mehrzeilige](Kommentare)
+[Kommentar: einzeilige u. mehrzeilige](#Kommentare)
 
 ## Tag 1
 
