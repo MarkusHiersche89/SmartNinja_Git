@@ -2,7 +2,12 @@
 # Zusammenfassung
 
 ## Inhaltsangabe
-[Kommentar: einzeilige u. mehrzeilige](#Kommentare)
+[Kommentare | einzeilige u. mehrzeilige](#Kommentare)
+[Variable | Deklaration und Initalisierung](#Variable)
+[Ausgabe | print()](#Ausgabe)
+[Konvertierung | int(), str(), ...](#Konvertierung)
+[Eingabe | input()](#Eingabe)
+[Verzweigung | if, elif, else](#Verzweigung)
 
 ## Tag 1
 
