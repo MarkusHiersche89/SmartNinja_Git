@@ -1,3 +1,3 @@
 # Script pull - Gehört NICHT zum Python-Projekt
 
-git pull origin maste
+git pull origin master
