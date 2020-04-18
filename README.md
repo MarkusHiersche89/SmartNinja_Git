@@ -121,7 +121,7 @@ Vergleichsoperatoren:
 | >= | größer gleich |
 | > | größer |
 
-Boolsche Operatoren:
+Boolsche Operatoren: (Noch nicht durchgemacht))
 | Schreibweise | gesprochen |
 |---|---|
 | and | und |
