@@ -31,3 +31,9 @@ Wo würde das nützlich sein? Wenn Sie beispielsweise den Benutzer fragen "Möch
 Wenn Sie fertig sind, fügen Sie Ihren Code in GitHub Gist ein und teilen Sie ihn im SmartNinja-Forum.
 
 """
+
+text = "Today Is A BeautiFul DAY"
+text_klein = text.lower()
+
+print("Text large: " + text)
+print("Text small: " + text_klein)

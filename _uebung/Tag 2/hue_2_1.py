@@ -47,3 +47,17 @@ Das Programm sollte ständig ausgeführt werden, solange der Benutzer Konvertier
 Wenn Sie fertig sind, fügen Sie Ihren Code in GitHub Gist ein und teilen Sie ihn im SmartNinja-Forum.
 
 """
+
+print("*** Kilometer in Milen- Umrechner ***")
+
+while True:
+    kilometer = float(input("\nKilometer: "))
+    milen = kilometer * 0.621371
+    print(str(kilometer) + " hat " + str(milen) + " Meilen.")
+    nochmal = input("\nNochmal? [y]/[n]: ")
+    while nochmal.lower() != "n" and nochmal.lower() != "y":
+        print("\nBitte gültigen Wert eingeben!")
+        nochmal = input("Nochmal? [y]/[n]")
+    if(nochmal.lower() == "n"):
+        print("\nProgramm wird beesndet")
+        break
