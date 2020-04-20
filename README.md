@@ -187,6 +187,9 @@ Die For-Schleife wird in der Regel immer dann genommen, wenn eine Liste oder Zah
 
 Beispiel 1: Sie wollen die Zahlen von 0 bis 20 ausgeben, jedoch nur die gerade Zahlen
 
+mit "%" (Modulo) kann man den Rest einer Division abfragen.
+Rechenbeispiel: 10 / 3 = 3 und 1 Rest (somit ist 10 % 3 gleich 1)
+
 ```python
 for i in range(20):     # Zahler i wird mit 0 deklariert
                         # Range: Bis wohin die schleife gehen soll
@@ -258,7 +261,6 @@ while True:
     else:
         print("Deine Zahl war zu groß")
 ```
-
 
 ### <a name="string.upper_string.lower"></a>Sting formatioeren mit upper() und lower()
 
