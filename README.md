@@ -258,6 +258,7 @@ while True:
         print("Deine Zahl war zu klein")
     elif eingabe == secret :
         print("Perfekt! Du hast " + str(zaehler) + " Versuche gebraucht.")
+        break
     else:
         print("Deine Zahl war zu groß")
 ```
