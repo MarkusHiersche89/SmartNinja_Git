@@ -232,7 +232,7 @@ Wenn die Schleife nicht abgebrochen werden soll (als ganzes), sondern nur der je
 Beispiel: Es soll bis 30 gezählt werden, jedoch sollen nur die Zahlen welche NICHT durch 3 Teilbar sind ausgegeben werden.
 ```python
 for i in range(30):
-    if(i % 3 == 0):
+    if i % 3 == 0 :
         continue
     print(i)
 ```
