@@ -17,6 +17,13 @@ Zusatz: Dies ist kein Lehrmaterial von SmartNinja, sondern zusammengeschrieben v
 [Konvertierung | int(), str(), ...](#Konvertierung)<br/>
 [Eingabe | input()](#Eingabe)<br/>
 [Verzweigung | if, elif, else](#Verzweigung)<br/>
+[Schleife | while()](#While-Schleife)<br/>
+[Zähl-Schleife | for()](#For-Schleife)<br/>
+[(Schleife) abbrechen | break](#break)<br/>
+[(Durchlauf) unterbrechen | continue](#continue)<br/>
+[Zufallszahlen | random()](#random)<br/>
+[Sting groß formatioeren | upper()](#string.upper)<br/>
+[Sting klein formatioeren | lower()](#string.lower)<br/>
 
 ## Tag 1 - 16.04.2020
 
@@ -155,6 +162,103 @@ else:
 ```
 
 ## Tag 2
+
+### <a name="While-Schleife"></a>While-Schleife
+
+Die While-Schleife kommt dann Beispielsweise zum Einsatz, um den User zu zwingen einen gültigen Wert einzugeben.
+Wenn hierbei der User eine falsche Eingabe macht, bleibt dieser in der Schleife gefangen
+
+```python
+eingabe = ""
+while eingabe != "y" and eingabe != "n":
+    eingabe = input("Bitte um Ihre Eingabe mit [y]/[n]: ")
+    if eingabe == "y" :
+        print("Sie haben sich für \"[Y]es\" entschieden.")
+        # plus weiterer Code
+    elif eingabe == "n":
+        print("Sie haben sich für \"[N]o\" entschieden")
+        # plus weiterer Code
+    else:
+        print("Bitte [y] oder [n] eingeben!")
+print("Programm beendet")
+```
+### <a name="For-Schleife"></a>For-Schleife
+
+Die For-Schleife wird in der Regel immer dann genommen, wenn eine Liste oder Zahlen durchgegangen werden soll.
+Beispiel: Sie wollen die Zahlen von 0 bis 20 ausgeben, jedoch nur die geraden:
+
+```python
+for i in range(20):     # Zahler i wird mit 0 deklariert
+                        # Range: Bis wohin die schleife gehen soll
+                        # Am Ende von jedem Durchlauf wird "i" um 1 erhöht
+    if i % 2 == 0:
+        print(i)
+```
+
+beispiel 2: Es sollen die zahlen von 10 bis 20 ausgegeben werden
+```python
+for i in range(10, 20):
+    print(i)
+```
+
+Beispiel 3: Es sollen Zahlen von 10 bis 40 ausgegeben werden, jedoch nur jede 3. zahl
+```python
+for i in range(10, 40, 3):
+    print(i)
+```
+
+### <a name="break"></a>(Schleife) abbrechen mit break()
+
+Angenommen man hat eine While-Schleife und die Zahl wird erraten, dann soll die Schleife beendet werden.
+
+```python
+geheim = 1234
+
+while True:
+    eingabe = int(input("Zahl: "))
+    if eingabe < geheim :
+        print("Ihre Eingabe war zu klein")
+    elif eingabe == geheim :
+        print("Perfekt! Erraten!")
+        break
+    else:
+        print("Ihre Eingabe war zu groß")
+```
+
+### <a name="continue"></a>(Durchlauf) unterbrechen mit continue
+
+Wenn die Schleife nicht abgebrochen werden soll (als ganzes), sondern nur der jetzige eine Durchlauf, dann kommt continue() dran.
+
+Beispiel: Es soll bis 30 gezählt werden, jedoch sollen nur die Zahlen welche NICHT durch 3 Teilbar sind ausgegeben werden.
+```python
+for i in range(30):
+    if(i % 3 == 0):
+        continue
+    print(i)
+```
+
+### <a name="random"></a>Zufallszahlen mit random generieren
+
+Um Spiele beispielsweise kniffliger zu gesalten, werden Zufallszahlen benötigt.
+
+Beispiel 1: Zahlenraten zwischen 0 und 100
+```python
+import random       # Bibliothek einbinden
+
+secret = random.randint(0, 100)     # Zufallszahl zwischen 0 und 100 generieren
+zaehler = 0
+
+while True:
+    zaehler += 1
+    eingabe = int(input("Deine Zahl: "))
+    if eingabe < secret :
+        print("Deine Zahl war zu klein")
+    elif eingabe == secret :
+        print("Perfekt! Du hast " + str(zaehler) + " Versuche gebraucht.")
+    else:
+        print("Deine Zahl war zu groß")
+```
+
 
 ## Tag 3
 
