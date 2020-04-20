@@ -165,7 +165,7 @@ else:
 ### <a name="While-Schleife"></a>While-Schleife
 
 Die While-Schleife kommt dann Beispielsweise zum Einsatz, um den User zu zwingen einen gültigen Wert einzugeben.
-Wenn hierbei der User eine falsche Eingabe macht, bleibt dieser in der Schleife gefangen
+Wenn hierbei der User eine falsche Eingabe macht, bleibt dieser in der Schleife gefangen.
 
 ```python
 eingabe = ""
