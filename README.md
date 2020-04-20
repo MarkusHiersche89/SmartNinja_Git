@@ -22,8 +22,7 @@ Zusatz: Dies ist kein Lehrmaterial von SmartNinja, sondern zusammengeschrieben v
 [(Schleife) abbrechen | break](#break)<br/>
 [(Durchlauf) unterbrechen | continue](#continue)<br/>
 [Zufallszahlen | random()](#random)<br/>
-[Sting groß formatioeren | upper()](#string.upper)<br/>
-[Sting klein formatioeren | lower()](#string.lower)<br/>
+[Sting formatioeren mit upper() und lower()](#string.upper_string.lower)<br/>
 
 ## Tag 1 - 16.04.2020
 
@@ -259,6 +258,30 @@ while True:
         print("Deine Zahl war zu groß")
 ```
 
+
+### <a name="string.upper_string.lower"></a>Sting formatioeren mit upper() und lower()
+
+Um Usereingaben besser mit vordefinierten Werten/Strings besser abgleichen zu können, ist es hilfreich die Usereingabe in Großen bzw. kleinen String zu konvertieren.
+
+Beispiel: Der Juser wird nach Ja/Nein gefragt.
+Somait kann dieser für ja folgendes eingeben:
+* JA
+* Ja
+* jA
+* ja
+
+Natürlich kann auch das "Nein" verschieden abgefragt werden...
+
+```python
+antwort = input("Ihre Antwort: [Ja]/[Nein]")
+
+if antwort.lower() == "ja":             # in Kleinbuchstaben umwandeln
+    print("Ihre Antwort war \"Ja\"")
+elif antwort.upper() == "NEIN":         # in Großbuchstaben umwandeln
+    print("Ihre Antwort war \"Nein\"")
+else:
+    print("Ihre Antwort war werder \"Ja\" noch \"Nein\"")
+```
 
 ## Tag 3
 
