@@ -184,7 +184,8 @@ print("Programm beendet")
 ### <a name="For-Schleife"></a>For-Schleife
 
 Die For-Schleife wird in der Regel immer dann genommen, wenn eine Liste oder Zahlen durchgegangen werden soll.
-Beispiel: Sie wollen die Zahlen von 0 bis 20 ausgeben, jedoch nur die geraden:
+
+Beispiel 1: Sie wollen die Zahlen von 0 bis 20 ausgeben, jedoch nur die geraden:
 
 ```python
 for i in range(20):     # Zahler i wird mit 0 deklariert
