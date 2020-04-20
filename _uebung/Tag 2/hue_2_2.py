@@ -92,7 +92,7 @@ Wenn Sie fertig sind, fügen Sie Ihren Code in GitHub Gist ein und teilen Sie ih
 ende = int(input("Endzahl: "))
 
 for i in range(1, ende):
-    if (i % 3 == 0 and i % 5 == 0):
+    if (i % 3 == 0 and i % 5 == 0): # Methematisch gesehen könnte man auch mit "i % 15 == 0" abfragen...
         print("fizzbuzz")
     elif(i % 3 == 0):
         print("fizz")
@@ -100,3 +100,4 @@ for i in range(1, ende):
         print("buzz")
     else:
         print(i)
+print("Programmende erreicht")

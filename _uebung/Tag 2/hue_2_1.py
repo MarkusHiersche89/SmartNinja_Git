@@ -51,13 +51,24 @@ Wenn Sie fertig sind, fügen Sie Ihren Code in GitHub Gist ein und teilen Sie ih
 print("*** Kilometer in Milen- Umrechner ***")
 
 while True:
+    # Eingabe:
     kilometer = float(input("\nKilometer: "))
+
+    # Umrechnung:
     milen = kilometer * 0.621371
+
+    # Ausgabe:
     print(str(kilometer) + " hat " + str(milen) + " Meilen.")
+
+    # Nochmal umrechnen?:
     nochmal = input("\nNochmal? [y]/[n]: ")
+
+    # wenn der User weder Y, y, N oder n eingegeben hat:
     while nochmal.lower() != "n" and nochmal.lower() != "y":
         print("\nBitte gültigen Wert eingeben!")
         nochmal = input("Nochmal? [y]/[n]")
+
+    # Programmende:
     if(nochmal.lower() == "n"):
         print("\nProgramm wird beesndet")
         break

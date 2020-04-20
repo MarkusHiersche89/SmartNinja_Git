@@ -33,7 +33,7 @@ Wenn Sie fertig sind, fügen Sie Ihren Code in GitHub Gist ein und teilen Sie ih
 """
 
 text = "Today Is A BeautiFul DAY"
-text_klein = text.lower()
+text_klein = text.lower()   # umwandeln in kleinen Text
 
 print("Text large: " + text)
 print("Text small: " + text_klein)
