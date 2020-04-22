@@ -90,8 +90,8 @@ Escape-Zeichen werden benötigt um bei Ausgaben formatiertungen vorzunehmen.
 | \t | horizontaler Tabulator |
 | \v | vertikaler Tabulator |
 | \a | Ton ausgabe |
-| \\ | Backslash |
-| \" | Doppeltes Anfürungszeichen |
+| \\\ | Backslash |
+| \\\" | Doppeltes Anfürungszeichen |
 
 ```python
 print("Die Rechnung \"7 * 7\" ergibt 49.")
