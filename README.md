@@ -14,13 +14,14 @@ Zusatz: Dies ist kein Lehrmaterial von SmartNinja, sondern zusammengeschrieben v
 [Kommentare | einzeilige u. mehrzeilige](#Kommentare)<br/>
 [Variable | Deklaration und Initalisierung](#Variable)<br/>
 [Ausgabe | print()](#Ausgabe)<br/>
+[Escape-Zeichen](#Escape)<br/>
 [Konvertierung | int(), str(), ...](#Konvertierung)<br/>
 [Eingabe | input()](#Eingabe)<br/>
 [Verzweigung | if, elif, else](#Verzweigung)<br/>
 [Schleife | while()](#While-Schleife)<br/>
 [Zähl-Schleife | for()](#For-Schleife)<br/>
-[(Schleife) abbrechen | break](#break)<br/>
-[(Durchlauf) unterbrechen | continue](#continue)<br/>
+[Schleife abbrechen | break](#break)<br/>
+[Schleifen-Durchlauf abbrechen (Schleife unterbrechen) | continue](#continue)<br/>
 [Zufallszahlen | random()](#random)<br/>
 [Sting formatioeren mit upper() und lower()](#string.upper_string.lower)<br/>
 
@@ -54,9 +55,9 @@ Folgende Typen gibt es:
 |---|---|---|
 | Integer | Ganze Zahl | 3 |
 | Float | Kommazahl | 10.2 |
-| String | Zeichenkette | "Ich liebe meine 4 kinder und den Burschen" |
+| String | Zeichenkette | "Ich liebe meine 4 Kinder und den Burschen!" |
 | Boolean | Wahrheitswert | True oder False |
-| List | Liste | ["Hy", 2, 2.4, False, 4]
+| List | Liste | ["Hy", 2, 7.4, False, 'a']
 
 Deklarieren und Initalisieren:
 ```python
@@ -77,6 +78,29 @@ Um auf der Konsole (unter Windows CMD/CommandLine und unter Linux Terminal/Shell
 ```python
 name = "Max"
 print("Hallo " + name + "!")
+```
+
+### <a name="Escape"></a>Escape-Zeichen
+
+Escape-Zeichen werden benötigt um bei Ausgaben formatiertungen vorzunehmen.
+
+| Zeichen | Bedeutung |
+|---|---|
+| \n | neue Zeile |
+| \t | horizontaler Tabulator |
+| \v | vertikaler Tabulator |
+| \a | Ton ausgabe |
+| \\ | Backslash |
+| \" | Doppeltes Anfürungszeichen |
+
+```python
+print("Die Rechnung \"7 * 7\" ergibt 49.")
+print("Dies ist eine mehrzeilige\nAusgabe zwecks Formatierung.")
+
+# Ausgaben:
+#   Die Rechnung "7 * 7" ergibt 49.
+#   Dies ist eine mehrzeilige
+#   Ausgabe zwecks Formatierung.
 ```
 
 ### <a name="Konvertierung"></a>Konvertierung
@@ -103,6 +127,8 @@ print(zahl_1 + " + " + zahl_2 + " = " + str(zahl_1 + zahl_2))
 Natürlich soll auch der Benutzer Eingaben machen können.
 
 Bei der Funktion "input()", kann in der Klammer angegeben werden, was unmittelbar vor der Eingabe stehen soll.
+Die Funktion/methode input() fragt standardmäßig nach einem String ab.
+Diesen kann man in jeden beliebigen Datentyp konvertieren.
 
 ```python
 # Bei String-Eingaben:
@@ -129,7 +155,7 @@ Vergleichsoperatoren:
 | >= | größer gleich |
 | > | größer |
 
-Boolsche Operatoren: (Noch nicht durchgemacht))
+Boolsche Operatoren:
 | Schreibweise | gesprochen |
 |---|---|
 | and | und |
@@ -210,7 +236,7 @@ for i in range(10, 40, 3):
     print(i)
 ```
 
-### <a name="break"></a>(Schleife) abbrechen mit break
+### <a name="break"></a>(chleife abbrechen mit break
 
 Angenommen man hat eine While-Schleife und die Zahl wird erraten, dann soll die Schleife beendet werden.
 
@@ -228,7 +254,7 @@ while True:
         print("Ihre Eingabe war zu groß")
 ```
 
-### <a name="continue"></a>(Durchlauf) unterbrechen mit continue
+### <a name="continue"></a>Schleifen-Durchlauf abbrechen (Schleife unterbrechen) mit continue
 
 Wenn die Schleife nicht abgebrochen werden soll (als ganzes), sondern nur der jetzige eine Durchlauf, dann kommt continue() dran.
 
