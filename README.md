@@ -236,7 +236,7 @@ for i in range(10, 40, 3):
     print(i)
 ```
 
-### <a name="break"></a>(chleife abbrechen mit break
+### <a name="break"></a>Schleife abbrechen mit break
 
 Angenommen man hat eine While-Schleife und die Zahl wird erraten, dann soll die Schleife beendet werden.
 
