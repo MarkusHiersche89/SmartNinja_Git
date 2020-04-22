@@ -23,7 +23,7 @@ Zusatz: Dies ist kein Lehrmaterial von SmartNinja, sondern zusammengeschrieben v
 [Schleife abbrechen | break](#break)<br/>
 [Schleifen-Durchlauf abbrechen (Schleife unterbrechen) | continue](#continue)<br/>
 [Zufallszahlen | random()](#random)<br/>
-[Sting formatioeren mit upper() und lower()](#string.upper_string.lower)<br/>
+[Sting formatieren mit upper() und lower()](#string.upper_string.lower)<br/>
 
 ## Tag 1 - 16.04.2020
 
@@ -289,7 +289,7 @@ while True:
         print("Deine Zahl war zu groß")
 ```
 
-### <a name="string.upper_string.lower"></a>Sting formatioeren mit upper() und lower()
+### <a name="string.upper_string.lower"></a>Sting formatieren mit upper() und lower()
 
 Um Usereingaben besser mit vordefinierten Werten/Strings besser abgleichen zu können, ist es hilfreich die Usereingabe in Großen bzw. kleinen String zu konvertieren.
 
