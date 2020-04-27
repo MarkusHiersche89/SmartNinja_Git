@@ -434,6 +434,12 @@ with open("person.csv", "r") as item:
             print(line[0] + " is " + line[2] + " and " + line[1] + " years old.")
         counter += 1
 
+"""
+# Inhalt von ninja.txt:
+Hallo,
+ich bin ein Text.
+Lese mich aus ;-)
+"""
 with open("ninja.txt", "r") as file:
     #print(file.read())
     lines = file.readlines()
