@@ -24,6 +24,9 @@ Zusatz: Dies ist kein Lehrmaterial von SmartNinja, sondern zusammengeschrieben v
 [Schleifen-Durchlauf abbrechen (Schleife unterbrechen) | continue](#continue)<br/>
 [Zufallszahlen | random()](#random)<br/>
 [Sting formatieren mit upper() und lower()](#string.upper_string.lower)<br/>
+[Listen](#list)<br/>
+[String zerteilen mit split()](#string.split)<br/>
+[CSV-Dateien lesen und schreiben](#csv_lesen_schreiben)<br/>
 
 ## Tag 1 - 16.04.2020
 
@@ -313,7 +316,136 @@ else:
     print("Ihre Antwort war werder \"Ja\" noch \"Nein\"")
 ```
 
-## Tag 3
+## Tag 3 - 23.04.2020
+
+### <a name="list"></a>Listen
+
+Die Schreibweise erinnert sehr stark von anderen Sprachen wie Arrays/Verctoren (Bsp. in C#, Java, ...).<br/>
+Jedoch sind diese komplex wie ArrayListen.
+
+```python
+# Schreibweise:
+freunde = ["Max", "Peter", "Susi"]
+
+# Einen Eintrag hinzufügen;
+freunde.append("Anna")
+
+# Einen Eintrag entfernen:
+freunde.remove("Peter")
+
+# Einzelnes Element ansprechen:
+freunde[0] = "Stefan" # das 0te Element (Menschlich gezählt das erste)
+
+# Sortieren:
+freunde.sort()
+
+# Alle Elemtente augeben:
+print(freunde)
+for f in freunde:
+    print(f)
+```
+
+Eine Liste in Python mus nicht aus einem Typ bestehen...<br/>
+Jedoch ist eine gemischte Liste mit Einschränkungen verbunden.<br/>
+Gemischte Listen können nicht sortiert werden.<br/>
+
+```python
+lotto_ziehung = [2, 45, 12, 23, 8, 11]
+lotto_ziehung.sort() # sortiert von der kleinsten zur größten Zahl
+print(lotto_ziehung)
+
+obst = ["Birne", "Zwetschke", "Kiwi", "Apfel"]
+obst.sort() # Sortiert von Alphabetisch - A bis Z
+print(obst)
+obst.sort(reverse=True) # Sortiert von Alphabetisch - Z - A
+print(obst)
+```
+
+Um nur bestimmte Elemente (Bsp.: nur die letzen oder ersten 5 Elemente) auszugeben gibt es einen eigenen Syntax.
+```python
+text = "Ich liebe meine 4 Kinder und den Burschen!"
+print(text[0:4])    # vom 0ten weggezählt bis zum 4. Zeichen.
+                    # Hier könnte man auch die "0" weglassen
+                    # Ausgabe: "Ich "
+print(text[2:-4])   # das Element mit der ID 2 (3. Zeichen) bis zum 4. Zeichen (vom Ende weggezählt)
+                    # Ausgabe: "h liebe meine 4 Kinder und den Bursc"
+```
+
+### <a name="string.split"></a>String teilen mit split()
+
+Um von einem Text die einzelnen Wörter zu erhalten bentigt man die .split()-Methode.<br/>
+Dies ist unter anderem wichtig beim Einlesen von .txt, .csv Dateien.
+
+Beispiel:
+```python
+text = "Ich liebe meine 4 Kinder und den Burschen!"
+woerter = text.split(" ")   # in .split(" ") steht das Zeichen drinnen welches den Text trennen soll
+print(woerter)
+
+eingelesene_zeile = "Max,Mustermann,+4367687838830,max.mustermann@mail.zz,1010 Wien"
+daten = eingelesene_zeile.split(",")
+print(daten)
+```
+
+### <a name="csv_lesen_schreiben"></a>CSV-Dateien lesen und schreiben
+
+CSV-Dateien sind oft von Tabellenkalkolationprogrammen oder Datenbanken exportiert worden.<br/>
+Hier sind zwar noch alle Datensätze enthalten, jedoch sind diese mit einem Komma oder Semikolon getrennt.<br/>
+Bei einem Export vom Tabellen-Kalkulationsprogramm sind Bilder, Grafiken & co entfernt worden.<br/>
+<br/>
+Das öffnen von Dateien kann auf 2 Wege erfolgen:<br/>
+mit => f = open("Datei.txt", "r") <= öffnen<br/>
+mit => f.close() <= schließen<br/>
+oder mit => with opem("Datei.txt", "r") as file: <=<br/>
+<br/>
+Attribute:<br/>
+
+| Code | Bedeutung |
+|---|---|
+| r | Datei nur zum Lesen öffnen. Beginnt am Anfang der Datei zu lesen. Dieser Standardmodus. |
+| rb | Öffnen Sie eine Datei zum Lesen nur im Binärformat. Beginnt am Anfang der Datei zu lesen. |
+| r+ | Datei zum Lesen und Schreiben öffnen. Dateizeiger am Anfang der Datei platziert. |
+| w | Datei nur zum Schreiben öffnen. Dateizeiger am Anfang der Datei platziert. Überschreibt eine vorhandene Datei und erstellt eine neue, wenn sie nicht vorhanden ist. |
+| wb | Wie w, jedoch im Binärmodus geöffnet. |
+| w+ | Wie w, aber auch zum Lesen aus der Datei. |
+| wb+ | Wie wb, aber auch zum Lesen aus der Datei. |
+| a | Öffnen Sie eine Datei zum Anhängen. Beginnt am Ende der Datei mit dem Schreiben. Erstellt eine neue Datei, wenn die Datei nicht vorhanden ist. |
+| ab | Wie a, jedoch im Binärformat. Erstellt eine neue Datei, wenn die Datei nicht vorhanden ist. |
+| a+ | Gleich a a aber auch offen zum Lesen. |
+| ab+ | Gleich ein ab, aber auch offen zum Lesen. |
+
+Beispiel:
+```python
+"""
+# Inhalt von person.csv:
+Name,Age,Gender
+Tina,23,female
+Jakob,35,male
+Barbara,44,female
+"""
+counter = 0
+
+lineList = []
+with open("person.csv", "r") as item:
+    for line in item:
+        if counter > 0:
+            line = line.rstrip("\n")
+            line = line.split(",")
+            print(line[0] + " is " + line[2] + " and " + line[1] + " years old.")
+        counter += 1
+
+with open("ninja.txt", "r") as file:
+    #print(file.read())
+    lines = file.readlines()
+    for line in lines:
+        print(line)
+
+with open("ninja1.txt", "w") as file1:
+    file1.write("Hallo neues File")
+
+with open("ninja1.txt", "a") as file:
+    file.append("\nappend")         # unter Windows: statt: "\n", "\r\n" eintragen
+```
 
 ## Tag 4
 
