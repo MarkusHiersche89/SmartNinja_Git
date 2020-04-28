@@ -1,5 +1,5 @@
 #
-# zum temporären testen...
+# zum temporären testen
 #
 
 """
