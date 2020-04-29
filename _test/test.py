@@ -1,5 +1,5 @@
 #
-# zum temporären testen
+# zum temporären testen...
 #
 
 """
@@ -38,7 +38,7 @@ for item in woerter:
     counter += 1
 print(woerter)
 """
-
+"""
 list = [1,3,5,2,6,4]
 list.sort()
 print(list)
@@ -75,3 +75,15 @@ print(woerter)
 eingelesene_zeile = "Max,Mustermann,+4367687838830,max.mustermann@mail.zz,1010 Wien"
 daten = eingelesene_zeile.split(",")
 print(daten)
+"""
+
+"""
+with open("text.txt", "r") as file:
+    for line in file:
+        print(line)
+"""
+
+f = open("datei.txt", "r")
+for line in f:
+    print(line)
+f.close()
