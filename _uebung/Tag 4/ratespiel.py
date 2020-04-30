@@ -10,7 +10,7 @@ with open("score_list.txt", "r") as score_file:
     print("Top scores: " + str(score_list))
 
 for score_dict in score_list:
-    print("Name: " + score_dict.get("name") + "; date: " + score_dict.get("date") + "; attempts: " + str(score_dict.get("attempts")) + "; wrong guesses: " + str(score_dict.get("wrong_guesses")))
+    print("Name: " + score_dict.get("name") + "; date: " + score_dict.get("date") + "; attempts: " + str(score_dict.get("attempts")) + "; wrong guesses: " + str(score_dict.get("wrong_guesses")) + "; secret " + str(score_dict.get("secret")))
 
 wrong_guesses = 0
 
@@ -24,7 +24,7 @@ while True:
         print("wrong_guesses: " + str(wrong_guesses))
 
         name = input("Your name: ")
-        score_list.append({"attempts": attempts, "wrong_guesses": wrong_guesses, "date": str(datetime.datetime.now()), "name": name})
+        score_list.append({"attempts": attempts, "wrong_guesses": wrong_guesses, "date": str(datetime.datetime.now()), "name": name, "secret": secret})
 
         with open("score_list.txt", "w") as score_file:
             score_file.write(json.dumps(score_list))

@@ -1,6 +1,5 @@
 import json
 
-telefonbuch = []
 with open("dict.txt", "r") as t:
     telefonbuch = json.loads(t.read())
 
@@ -13,7 +12,7 @@ while True:
     auswahl = int(input("Ihre Auswahl: "))
     if auswahl == 0:
         print("Programm wird beendet")
-        break;
+        break
     elif auswahl == 1:
         name = input("\nName: ")
         tel = input("Telefon: ")
@@ -21,8 +20,8 @@ while True:
         telefonbuch.append({"name": name, "phone": tel, "city": ort})
     elif auswahl == 2:
         print("\nAlle Einträge:")
-        for item in telefonbuch:
-            print("Name: " + item.get("name") + " | Tel: " + item.get("phone") + " | Ort: " + item.get("city"))
+        for t in telefonbuch:
+            print("Name: " + t.get("name") + " | Tel: " + t.get("phone") + " | Ort: " + t.get("city"))
     elif auswahl == 3:
         with open("dict.txt", "w") as d:
             d.write(json.dumps(telefonbuch))
